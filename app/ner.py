@@ -37,7 +37,7 @@ from NER_utils.conll_to_brat import conll_to_brat, output_brat
 print("API READY")
 CORS(app)
 
-models = ['procedimiento','enfermedad','farmaco','sintoma']
+models = ['enfermedad','farmaco']
 with open('decs2020.json', 'r') as file:
      terms = json.load(file)
 
@@ -184,7 +184,7 @@ def get_annotations():
         global models
         models = [json_input['ner_type']]
     else:
-        models = ['enfermedad', 'farmaco', 'sintoma', 'procedimiento']
+        models = ['enfermedad', 'farmaco']
     json_to_file = {
         'INPUTTEXT': json_input['INPUTTEXT'].rstrip()
     }
