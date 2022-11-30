@@ -7,5 +7,5 @@ services:
       - 8004:5000
     volumes:
       - ./:/app
-    command: uwsgi --http 0.0.0.0:5000 --callable app --module app --master --processes 4 --threads 2
+    command: uwsgi --http 0.0.0.0:5000 --callable app --module app
     restart: always
